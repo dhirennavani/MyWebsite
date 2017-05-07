@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="lib/Semantic-UI-CSS/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="styles/special_style.css">
+<link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="lib/Semantic-UI-CSS/components/visibility.js"></script>
+  <script src="lib/Semantic-UI-CSS/components/sidebar.js"></script>
+  <script src="lib/Semantic-UI-CSS/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+    
+    
+    
+    $(".item").on("click", function() {
+      $(".item").removeClass("active");
+      $(this).addClass("active");
+    });
+
+
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <div class="item">
+    
+    </div>
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a class="item">Work</a>
+  <a class="item">Company</a>
+  <a class="item">Careers</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a  style='
+    display: inline-block;
+    color: rgba(255,255,255,.9);
+    
+    font-weight: bold;
+    line-height: 1em;
+    font-family: "Rancho";
+    font-size: 37px;
+    text-transform: none;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+    padding-right: 1.14286em;
+        padding-left: 1.14286em;
+        self-align: "flex-end"
+    
+    '>< Dhiren Navani /> </a>
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+        <div class="right item">
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="ui container ui_container_top_margin">  
+    <img class="ui medium circular image image_margin image_shadow" src="assets/dp5.jpg"> 
+     
+      <h2 style='font-family: "Source Sans Pro";'>A Computer Science student, a news junkie and a wannabe poet.</h2>
+      <a target="_blank" href="https://www.linkedin.com/in/dhirennavani/"
+      <i class="fa fa-3x fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="https://github.com/dhirennavani"
+      <i class="fa fa-3x fa-github" aria-hidden="true"></i>
+      </a>
+       <a target="_blank" href="https://twitter.com/thee_reign"
+      <i class="fa fa-3x fa-twitter" aria-hidden="true"></i>
+      </a>
+       <a target="_blank" href="https://www.quora.com/profile/Dhiren-Navani"
+      <i class="fa fa-3x fa-quora" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="mailto:navanidhiren@gmail.com"
+      <i class="fa fa-3x fa-envelope" aria-hidden="true"></i>
+      </a>
+      </div>
+
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      
+     
+          
+          <h3 class="ui header sixteen wide column">Introduction</h3>
+          <div class="sixteen wide column">
+        <p><img src="assets/namaste.png"> Welcome here! </br>
+        I am a student of technology and poetry, both seem to be complicated, probably because its difficult to keep them simple. I love the engineering involved in writing poetry and creativity that is necessary to develop technology. The inspiration behind a poetry or a cool technology can be a thought, an idea or an observation. That is the reason, I strive to listen to and think about varied ideas and opinions. I believe, humans are like AI or wait, its vice versa, but both do get better with input.
+        
+        I spend a lot of time thinking about problems, discussing them and thinking about technological solutions. I am always interested in novel observations that can be the origins of a radical solution.</p>
+      </p>
+      <p>
+      As of today, I am a masters student in Computer Science at Arizona State University. I am graduating in may 2017. 
+      </p>
+      
+         <p>
+       Just like software, it is necessary to keep yourself updated. I consume news daily and often binge watch documentaries. I do hear and read poetries (hindi) to instill some wisdom in myself.</p>
+     <p>
+     I do express myself on my blog via poetries predominantly. I also share my knowledge on quora. I attend a lot of Meetups and events around and have got an opportunity to present once.
+     </p>
+     <p>
+     Communication makes things happen, just like coffee. So lets give it a shot and talk over a {{"Enter your favourite beverage"}}. At worst, you will find a friend, which is not bad at all. :)
+     </p>
+     <p>
+     A simple "Hi" can be a start for something substantial. I am available on all social platforms below. 
+     </p>
+     <div align="center">
+     <a target="_blank" href="https://www.linkedin.com/in/dhirennavani/"
+      <i class="fa fa-3x fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="https://github.com/dhirennavani"
+      <i class="fa fa-3x fa-github" aria-hidden="true"></i>
+      </a>
+       <a target="_blank" href="https://twitter.com/thee_reign"
+      <i class="fa fa-3x fa-twitter" aria-hidden="true"></i>
+      </a>
+       <a target="_blank" href="https://www.quora.com/profile/Dhiren-Navani"
+      <i class="fa fa-3x fa-quora" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="mailto:navanidhiren@gmail.com"
+      <i class="fa fa-3x fa-envelope" aria-hidden="true"></i>
+      </a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+ <div class="ui vertical stripe  segment">
+      <div class="ui middle aligned stackable grid container">
+     <h3 class="ui header">Projects</h3>
+<div class="ui three cards">
+  
+<div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Elliot Fu
+      </div>
+      <div class="meta">
+        Friends of Veronika
+      </div>
+      <div class="description">
+        Elliot requested permission to view your contact details
+      </div>
+    </div>
+    
+  </div>
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
+      <div class="header">
+        Jenny Hess
+      </div>
+      <div class="meta">
+        New Member
+      </div>
+      <div class="description">
+        Jenny wants to add you to the group <b>best friends</b>
+      </div>
+    </div>
+
+  </div>
+    
+    
+    <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Elliot Fu
+      </div>
+      <div class="meta">
+        Friends of Veronika
+      </div>
+      <div class="description">
+        Elliot requested permission to view your contact details
+      </div>
+    </div>
+    
+  </div>
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
+      <div class="header">
+        Jenny Hess
+      </div>
+      <div class="meta">
+        New Member
+      </div>
+      <div class="description">
+        Jenny wants to add you to the group <b>best friends</b>
+      </div>
+    </div>
+    
+      </div>
+    
+
+    
+    
+    
+    <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Elliot Fu
+      </div>
+      <div class="meta">
+        Friends of Veronika
+      </div>
+      <div class="description">
+        Elliot requested permission to view your contact details
+      </div>
+    </div>
+ 
+  </div>
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
+      <div class="header">
+        Jenny Hess
+      </div>
+      <div class="meta">
+        New Member
+      </div>
+      <div class="description">
+        Jenny wants to add you to the group <b>best friends</b>
+      </div>
+    </div>
+    
+  </div>
+    
+    
+    <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Elliot Fu
+      </div>
+      <div class="meta">
+        Friends of Veronika
+      </div>
+      <div class="description">
+        Elliot requested permission to view your contact details
+      </div>
+    </div>
+
+     
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
+      <div class="header">
+        Jenny Hess
+      </div>
+      <div class="meta">
+        New Member
+      </div>
+      <div class="description">
+        Jenny wants to add you to the group <b>best friends</b>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+</div>
+<!--
+  <div class="ui vertical stripe quote segment">    
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>"What a Company"</h3>
+          <p>That is what they all say about us</p>
+        </div>
+        <div class="column">
+          <h3>"I shouldn't have gone with their competitor."</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+      <a class="ui large button">Read More</a>
+      <h4 class="ui horizontal header divider">
+        <a href="#">Case Studies</a>
+      </h4>
+      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+      <a class="ui large button">I'm Still Quite Interested</a>
+    </div>
+  </div>
+
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contact Us</a>
+            <a href="#" class="item">Religious Ceremonies</a>
+            <a href="#" class="item">Gazebo Plans</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Banana Pre-Order</a>
+            <a href="#" class="item">DNA FAQ</a>
+            <a href="#" class="item">How To Access</a>
+            <a href="#" class="item">Favorite X-Men</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call</p>
+        </div>
+        <div class="ui sixteen wide column" style="color:rgba(255, 255, 255, 0.498039); box-shadow: 0 0 0 0 rgba(255,255,255,.1);">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
+        
+      </div>
+        
+      
+    </div>
+   
+  </div>
+  
+</div>
+
+</body>
+
+</html>
