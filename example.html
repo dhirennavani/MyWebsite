@@ -8,6 +8,10 @@
   <script src="lib/Semantic-UI-CSS/components/visibility.js"></script>
   <script src="lib/Semantic-UI-CSS/components/sidebar.js"></script>
   <script src="lib/Semantic-UI-CSS/components/transition.js"></script>
+    <script src="lib/Semantic-UI-CSS/components/modal.js"></script>
+    <script src="lib/Semantic-UI-CSS/components/dimmer.js"></script>
+    <script src="lib/handlebars-v4.0.5.js"></script>
+
   <script>
   $(document)
     .ready(function() {
@@ -41,6 +45,11 @@
 
     })
   ;
+      
+      
+     function showModal(elmt) {
+         $(elmt).find(".ui.modal").modal('show');
+     }
   </script>
 </head>
 <body>
@@ -146,20 +155,11 @@
           <h3 class="ui header sixteen wide column">Introduction</h3>
           <div class="sixteen wide column">
         <p><img src="assets/namaste.png"> Welcome here! </br>
-        I am a student of technology and poetry, both seem to be complicated, probably because its difficult to keep them simple. I love the engineering involved in writing poetry and creativity that is necessary to develop technology. The inspiration behind a poetry or a cool technology can be a thought, an idea or an observation. That is the reason, I strive to listen to and think about varied ideas and opinions. I believe, humans are like AI or wait, its vice versa, but both do get better with input.
+        I am a student of technology and poetry, both seem to be complicated, probably because its difficult to keep them simple. I love the engineering involved in writing poetry and creativity that is necessary to develop technology. A poetry or a technonogy, often stem from a novel observation or an idea. I believe, humans are like AI or wait, its vice versa, but both do get better with input.
         
-        I spend a lot of time thinking about problems, discussing them and thinking about technological solutions. I am always interested in novel observations that can be the origins of a radical solution.</p>
+        I spend most of time thinking about and developing technological solutions, reading or writing poetries, consuming news, binge watching documentaries and being at meetups. These varied activities and sources of ideas and opinions, contribute to my thought process, which leads to ideas.</p>
       </p>
-      <p>
-      As of today, I am a masters student in Computer Science at Arizona State University. I am graduating in may 2017. 
-      </p>
-      
-         <p>
-       Just like software, it is necessary to keep yourself updated. I consume news daily and often binge watch documentaries. I do hear and read poetries (hindi) to instill some wisdom in myself.</p>
-     <p>
-     I do express myself on my blog via poetries predominantly. I also share my knowledge on quora. I attend a lot of Meetups and events around and have got an opportunity to present once.
-     </p>
-     <p>
+<p>
      Communication makes things happen, just like coffee. So lets give it a shot and talk over a {{"Enter your favourite beverage"}}. At worst, you will find a friend, which is not bad at all. :)
      </p>
      <p>
@@ -192,7 +192,34 @@
      <h3 class="ui header">Projects</h3>
 <div class="ui three cards">
   
-<div class="card">
+<div class="card" onClick='showModal(this)'>
+    
+    <div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="/images/avatar/large/chris.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+    
     <div class="content">
       <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
       <div class="header">
@@ -228,13 +255,13 @@
     <div class="content">
       <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
       <div class="header">
-        Elliot Fu
+        Meets
       </div>
       <div class="meta">
-        Friends of Veronika
+        Personal Project - April 2017
       </div>
       <div class="description">
-        Elliot requested permission to view your contact details
+        An Alexa Skill to find meets in your city.
       </div>
     </div>
     
