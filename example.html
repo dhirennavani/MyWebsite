@@ -13,6 +13,8 @@
     <script src="lib/handlebars-v4.0.5.js"></script>
 
   <script>
+      
+var meets={title : "Meets", description : '<h1> description </h1>', image: "assets/Logomakr_3iAJ9O108x108.png", github: "https://github.com/dhirennavani/Meets"};
   $(document)
     .ready(function() {
     
@@ -47,8 +49,20 @@
   ;
       
       
-     function showModal(elmt) {
-         $(elmt).find(".ui.modal").modal('show');
+     function showModal(title, description, github, image)
+      {
+        // console.log($(elmt).find("ui modal"));
+        var selected_modal =  "#modal_with_image";
+        if(image==="")
+            {
+                selected_modal = "#modal_without_image";
+              
+            }
+          
+        $(selected_modal).find("#title").text(title);
+        $(selected_modal).find("#description").html(description);
+         $(selected_modal).modal('show');
+         //$("#modal_with_image").modal('show');
      }
   </script>
 </head>
@@ -186,39 +200,79 @@
     </div>
   </div>
 
-
- <div class="ui vertical stripe  segment">
-      <div class="ui middle aligned stackable grid container">
-     <h3 class="ui header">Projects</h3>
-<div class="ui three cards">
-  
-<div class="card" onClick='showModal(this)'>
-    
-    <div class="ui modal">
+<!-- UI MODAL ELEMENT WITH IMAGE -->
+ <div class="ui modal" id="modal_with_image">
   <i class="close icon"></i>
-  <div class="header">
-    Profile Picture
+  <div class="header" id="title">
+    PROJECT TITLE
+      <a target="_blank" style="float:right; clear: both;" href="https://github.com/dhirennavani">
+      <i class="fa fa-customsize fa-github"  aria-hidden="true"></i>
+      </a>
   </div>
+      
+   
   <div class="image content">
     <div class="ui medium image">
-      <img src="/images/avatar/large/chris.jpg">
+      <img src="/images/avatar/large/chris.jpg" id="image">
     </div>
-    <div class="description">
+    <div class="description" id="description">
       <div class="ui header">We've auto-chosen a profile image for you.</div>
       <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
       <p>Is it okay to use this photo?</p>
     </div>
   </div>
   <div class="actions">
-    <div class="ui black deny button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      Yep, that's me
+    <div class="ui green ok inverted button">
       <i class="checkmark icon"></i>
     </div>
   </div>
 </div>
+
+<!--UI MODAL WITHOUT IMAGE -->
+ <div class="ui modal" id="modal_without_image">
+  <i class="close icon"></i>
+  <div class="header" id="title">
+    PROJECT TITLE
+  </div>
+     
+     
+  <div class="content" id="description">
+   
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+   
+  </div>
+  <div class="actions">
+   
+    <div class="ui green ok inverted button">
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+
+
+ <div class="ui vertical stripe  segment">
+      <div class="ui middle aligned stackable grid container">
+     <h3 class="ui header">Projects</h3>
+<div class="ui three cards">
+  
+<div class="card" onClick='showModal(meets.title, meets.description, meets.github, meets.image);'>
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Meets
+      </div>
+      <div class="meta">
+        Personal Project - April 2017
+      </div>
+      <div class="description">
+        An Alexa Skill to find meets in your city.
+      </div>
+    </div>
+</div>
+<div class="card" onClick='showModal()'>
+    
+  
     
     <div class="content">
       <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
@@ -251,21 +305,9 @@
   </div>
     
     
-    <div class="card">
-    <div class="content">
-      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-      <div class="header">
-        Meets
-      </div>
-      <div class="meta">
-        Personal Project - April 2017
-      </div>
-      <div class="description">
-        An Alexa Skill to find meets in your city.
-      </div>
-    </div>
+
     
-  </div>
+  
   <div class="card">
     <div class="content">
       <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
@@ -280,7 +322,7 @@
       </div>
     </div>
     
-      </div>
+</div>
     
 
     
